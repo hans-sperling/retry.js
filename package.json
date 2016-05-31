@@ -1,6 +1,6 @@
 {
     "name"        : "retry.js",
-    "version"     : "0.1.0",
+    "version"     : "1.0.0",
     "description" : "Retries checking with increasing delays until the condition is satisfied or the given maximum is reached",
     "keywords" : [
         "retry",

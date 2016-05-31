@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                 banner: banner
             },
             dist: {
-                src: 'src/retry:JS',
+                src: 'src/retry.js',
                 dest: 'dist/retry_v<%= pkg.version %>.js'
             }
         }
