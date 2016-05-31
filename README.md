@@ -5,7 +5,7 @@ If successful, the given callback function will be called with parameter {boolea
 
 ## Function
 
-`retry({number} delay, {number} maximum, {function} whatToDo, {function} callback);`
+retry(*number* **delay**, *number* **maximum**, *function* **whatToDo**, *function* **callback**);
 
 
 ## Example & Usage
