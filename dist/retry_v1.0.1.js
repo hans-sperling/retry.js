@@ -1,4 +1,4 @@
-/*! retry.js - Retries checking with increasing delays until the condition is satisfied or the given maximum is reached - Version: 1.0.0 */
+/*! retry.js - Retries checking with increasing delays until the condition is satisfied or the given maximum is reached - Version: 1.0.1 */
 /**
  * Retries checking with increasing delays until the condition is satisfied or the given maximum is reached.
  * If successful, the given callback function will be called with parameter {boolean} true or {boolean} false on
