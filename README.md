@@ -9,24 +9,38 @@ retry(*number* **delay**, *number* **maximum**, *function* **whatToDo**, *functi
 
 
 ## Example & Usage
+
+The following example checks if an external, asynchronously loaded script has been added to the DOM.
+
 ```javascript
 
+    // Tries 5 times to check condition in whatToDo()
     retry(25, 5, whatToDo, onCallback);
+    
+    
 
     /**
      * Returns true if DOM-Element is found or false if not
+     *
+     * @returns {boolean}
      */
      function whatToDo() {
-        var myAsyncExternalDomElement = $('#myAsyncExternalDomElement');
+        var elementExists = !!($('#asyncExternalDomScript').length);
 
-        return myAsyncExternalDomElement;
-        }
+        return elementExists;
     }
+
 
     /*
      * Callback-Function
+     *
+     * Will be called from retry.js with onCallback(true) if the DOM-Element has benn found
+     * or with onCallback(false) if not
+     *
+     * @param {boolean} allRight - State of retry.js callback - True if whatToDo() returns true 
+     *                             or false if returns false 
      */
-    function onCallback(ollRight) {
+    function onCallback(allRight) {
         if (allRight) {
             alert('DOM-Element has been loaded!');
         }
