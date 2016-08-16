@@ -1,21 +1,25 @@
 # retry.js
 
-Retries checking with increasing delays until the condition is satisfied or the given maximum is reached.
+Wait for delayed (async) scripts.
+
+Retries checking with increasing delay times until the given condition is satisfied or the given maximum is reached.
 If successful, the given callback function will be called with parameter {boolean} true or {boolean} false on failure.
 
-## Function
 
-retry(*number* **delay**, *number* **maximum**, *function* **whatToDo**, *function* **callback**);
+## Parameters
+
+retry(*function* **condition**, *function* **callback**, *number* **delay**, *number* **maximum**);
 
 
-## Example & Usage
+## Example
 
 The following example checks if an external, asynchronously loaded script has been added to the DOM.
 
 ```javascript
 
-    // Tries 5 times to check condition in whatToDo()
-    retry(25, 5, whatToDo, onCallback);
+    // Tries with default values to check condition in condition()
+    // Defaults: delay: 25ms, maximum 5 times
+    retry(condition, onCallback);
     
     
 
@@ -24,7 +28,7 @@ The following example checks if an external, asynchronously loaded script has be
      *
      * @returns {boolean}
      */
-     function whatToDo() {
+     function condition() {
         var elementExists = !!($('#asyncExternalDomScript').length);
 
         return elementExists;
