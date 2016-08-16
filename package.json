@@ -1,16 +1,16 @@
 {
     "name"        : "retry.js",
-    "version"     : "1.0.1",
-    "description" : "Retries checking with increasing delays until the condition is satisfied or the given maximum is reached",
-    "keywords" : [
+    "version"     : "2.0.0",
+    "description" : "Retries checking with increasing delay times until the given condition is satisfied or the given maximum of retries is reached",
+    "keywords"    : [
         "retry",
         "timeout",
         "callback",
         "javascript"
     ],
     "repository" : {
-        "type": "git",
-        "url": "https://github.com/hans-sperling/retry.js"
+        "type" : "git",
+        "url"  : "https://github.com/hans-sperling/retry.js"
     },
     "devDependencies" : {
         "grunt"                : "1.x.x",

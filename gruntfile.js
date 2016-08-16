@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             },
             build : {
                 src  : 'src/retry.js',
-                dest : 'dist/retry_v<%= pkg.version %>.min.js'
+                dest : 'dist/retry.min.js'
             }
         },
         concat : {
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: 'src/retry.js',
-                dest: 'dist/retry_v<%= pkg.version %>.js'
+                dest: 'dist/retry.js'
             }
         }
     });
